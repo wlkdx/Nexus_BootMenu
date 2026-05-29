@@ -145,7 +145,7 @@ PRs and issues are welcome. If you port this to another M5Stack device, open a P
 ## Acknowledgements
 
 Built with the help of [Claude](https://claude.ai) by Anthropic —
-co-developed the entire system architecture, partition layout, custom bootloader, and tooling over a very long debugging session.
+co-developed the entire partition layout, custom bootloader, and tooling over a very long debugging session.
 
 > *"мы не лошары"* — the developer, somewhere around hour 6
 
