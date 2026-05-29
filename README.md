@@ -4,11 +4,11 @@
   ▄▄▄▄▄▄▄      NEXUS-BOOT v1.0
  █ ▄▄▄▄▄ █     Over-The-Cable Injector
  █ █   █ █     
- █ █▄▄▄█ █     Custom BIOS for M5StickS3
+ █ █▄▄▄█ █     Custom Bootloader for M5StickS3
  █▄▄▄▄▄▄▄█     
 ```
 
-A custom BIOS and app launcher for the **M5StickS3** (ESP32-S3). Store multiple firmware images on the device, pick one from a menu, launch it — and hold a button to return to the BIOS at any time. Works with any `.bin` file, no modification required.
+A custom BootLoader and app launcher for the **M5StickS3** (ESP32-S3). Store multiple firmware images on the device, pick one from a menu, launch it — and hold a button to return to the Bootloader at any time. Works with any `.bin` file, no modification required.
 
 ---
 
@@ -16,7 +16,7 @@ A custom BIOS and app launcher for the **M5StickS3** (ESP32-S3). Store multiple 
 
 - **Boot menu** — browse and launch stored `.bin` firmware images from a clean UI
 - **Over-the-cable upload** — push apps wirelessly over USB via `nexus_cli.py`
-- **Return to BIOS from any app** — hold BtnA during reset, no app modification needed
+- **Return to BootLoader from any app** — hold BtnA during reset, no app modification needed
 - **Persistent app storage** — apps live in LittleFS, survive reboots
 - **One-command installer** — flash everything onto a fresh device in seconds
 
