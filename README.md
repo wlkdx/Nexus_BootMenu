@@ -8,15 +8,15 @@
  █▄▄▄▄▄▄▄█     
 ```
 
-A custom BootLoader and app launcher for the **M5StickS3** (ESP32-S3). Store multiple firmware images on the device, pick one from a menu, launch it — and hold a button to return to the Bootloader at any time. Works with any `.bin` file, no modification required.
+A custom bootloader and app launcher for the **M5StickS3** (ESP32-S3). Store multiple firmware images on the device, pick one from a menu, launch it — and hold a button to return to the bootloader at any time. Works with any `.bin` file, no modification required.
 
 ---
 
 ## Features
 
 - **Boot menu** — browse and launch stored `.bin` firmware images from a clean UI
-- **Over-the-cable upload** — push apps wirelessly over USB via `nexus_cli.py`
-- **Return to BootLoader from any app** — hold BtnA during reset, no app modification needed
+- **Over-the-cable upload** — push apps over USB via `nexus_cli.py`
+- **Return to bootloader from any app** — hold BtnA during reset, no app modification needed
 - **Persistent app storage** — apps live in LittleFS, survive reboots
 - **One-command installer** — flash everything onto a fresh device in seconds
 
@@ -54,11 +54,11 @@ Select `1`, enter the path to your `.bin` file. The app is transferred over USB 
 
 ### Launch an app
 
-In the BIOS menu on the stick:
+In the bootloader menu on the stick:
 - **BtnB** (side button) — scroll through apps
 - **BtnA** (front button) — launch selected app
 
-### Return to BIOS from any running app
+### Return to bootloader from any running app
 
 Hold **BtnA** (front button, G11), then press **Reset** (side power button). Keep holding BtnA for ~1 second. The device reboots back into NEXUS-BOOT.
 
@@ -76,7 +76,7 @@ Nexus_Bootloader/
 │   │   └── ...          GPIO factory-reset hook
 │   ├── partitions.csv
 │   └── sdkconfig.defaults
-├── bootmenu/            Arduino/PlatformIO project — BIOS firmware
+├── bootmenu/            Arduino/PlatformIO project — bootloader firmware
 │   ├── src/main.cpp
 │   ├── platformio.ini
 │   └── partitions.csv
@@ -112,7 +112,7 @@ When you launch an app from the menu, NEXUS-BOOT writes it to `ota_0` and sets i
 
 ## Building from Source
 
-### Bootmenu (BIOS firmware)
+### Bootmenu (bootloader firmware)
 
 Requires [PlatformIO](https://platformio.org/).
 
@@ -122,7 +122,7 @@ pio run
 # output: .pio/build/m5stack-sticks3/firmware.bin
 ```
 
-### Bootloader
+### Bootloader (second-stage)
 
 Requires PlatformIO with ESP-IDF framework.
 
