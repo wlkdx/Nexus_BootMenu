@@ -69,24 +69,19 @@ This works with **any** app — no modification to the app is required.
 ## Project Structure
 
 ```
-Nexus_Bootloader/
+Nexus_BootMenu/
 ├── bootloader/          ESP-IDF project — custom second-stage bootloader
-│   ├── src/main.c       (empty stub app, bootloader logic is in components)
+│   ├── src/
 │   ├── bootloader_components/
-│   │   └── ...          GPIO factory-reset hook
 │   ├── partitions.csv
 │   └── sdkconfig.defaults
 ├── bootmenu/            Arduino/PlatformIO project — bootloader firmware
 │   ├── src/main.cpp
 │   ├── platformio.ini
 │   └── partitions.csv
-├── example.ino.bin      Sample app for testing
-└── release 1.0/         Pre-built release (flash with install.py)
-    ├── install.py
-    ├── bootloader.bin
-    ├── nexus_boot.bin
-    ├── partitions.bin
-    └── nexus_cli.py
+├── CONTRIBUTORS.md
+├── LICENSE
+└── README.md
 ```
 
 ---
